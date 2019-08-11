@@ -18,7 +18,7 @@
  * Plugin version info
  *
  * @package    tool
- * @subpackage saveconfig
+ * @subpackage clearcache
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
@@ -26,5 +26,5 @@ defined('MOODLE_INTERNAL') || die();
 
 $plugin->version   = 2019071001;
 $plugin->requires  = 2014071000;
-$plugin->component = 'tool_saveconfig'; // Full name of the plugin (used for diagnostics)
+$plugin->component = 'tool_clearcache'; // Full name of the plugin (used for diagnostics)
 

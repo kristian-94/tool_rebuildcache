@@ -18,7 +18,7 @@
  * Link to unsupported db replace script.
  *
  * @package    tool
- * @subpackage saveconfig
+ * @subpackage clearcache
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
@@ -26,11 +26,11 @@ defined('MOODLE_INTERNAL') || die;
 
 if ($hassiteconfig) {
 
-    $url = new moodle_url("/admin/tool/saveconfig");
-    $ADMIN->add('tools', new admin_externalpage('tool_saveconfig', 'Clear course cache', $url));
+    $url = new moodle_url("/admin/tool/clearcache");
+    $ADMIN->add('tools', new admin_externalpage('tool_clearcache', 'Clear course cache', $url));
 
-    $settings = new admin_settingpage('tool_saveconfig_settings', 'Clear caches');
-    $settings->add(new admin_setting_configcheckbox('tool_saveconfig/enable',
+    $settings = new admin_settingpage('tool_clearcache_settings', 'Clear caches');
+    $settings->add(new admin_setting_configcheckbox('tool_clearcache/enable',
         'enable', 'do you want to enable this plugin',
         '1'));
     $ADMIN->add('tools', $settings);

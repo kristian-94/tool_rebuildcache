@@ -21,11 +21,11 @@ require_once($CFG->libdir . '/adminlib.php');
 
 require_login(null, false);
 require_capability('moodle/site:config', context_system::instance());
-$url = new moodle_url('/admin/tool/saveconfig/index.php');
+$url = new moodle_url('/admin/tool/clearcache/index.php');
 $PAGE->set_url($url);
 $PAGE->set_title('Clear cache');
 $PAGE->set_heading('Clear cache');
-admin_externalpage_setup('tool_saveconfig');
+admin_externalpage_setup('tool_clearcache');
 
 $mform = new tool_coursecache_form();
 //Form processing and displaying is done here
